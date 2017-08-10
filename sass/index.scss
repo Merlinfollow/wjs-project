@@ -1,0 +1,368 @@
+@import "base.scss";
+//头部区域
+.wjs-header{
+  .row>div{
+    border: 1px solid #000;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+      a{
+        color:#666;
+        font-size: 12px;
+      }
+  }
+  .row>div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row>div:first-child a{
+    position: relative;
+  }
+  .row>div:first-child a img{
+    position: absolute;
+    left:-5px;
+    top:25px;
+    display: none;
+    z-index: 99;
+  }
+  .row>div:first-child a:hover img{
+    display: block;
+  }
+}
+
+//导航区域
+#wjs-navbar{
+  a{
+    height: 80px;
+    line-height: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+  a:not(.navbar-brand):hover{
+    border-bottom: 4px solid red;
+  }
+  a.navbar-brand span:first-child{
+    color: red;
+    font-size: 50px;
+    transform: translateY(-10%);
+  }
+  a.navbar-brand span:last-child{
+    color: #000;
+    font-size: 70px;
+    transform: translateY(6%);
+  }
+
+}
+
+//轮播图区域
+.my-navbannner{
+  .item a{
+    display: block;
+    width: 100%;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .item a[class^="bg-img"]{
+    height: 410px;
+  }
+  .item a.bg-img-a{
+    background: url("../images/slide_01_2000x410.jpg") center top;
+  }
+  .item a.bg-img-b{
+    background: url("../images/slide_02_2000x410.jpg") center top;
+  }
+  .item a.bg-img-c{
+    background: url("../images/slide_03_2000x410.jpg") center top;
+  }
+  .item a.bg-img-d{
+    background: url("../images/slide_04_2000x410.jpg") center top;
+  }
+}
+
+//内容区域
+.wjs-content{
+  padding: 30px 0;
+  max-width: 970px;
+    .media{
+      display: block;
+      cursor: pointer;
+      a{
+        font-size: 40px;
+        color: #666;
+        text-decoration: none;
+      }
+     }
+  .media:hover{
+    color: red;
+    text-decoration: underline;
+    a{
+      color: red;
+    }
+  }
+  .row>div{
+    padding: 10px;
+    text-align: center;
+  }
+  .media{
+    display: inline-block;
+  }
+  .media-body{
+    width:auto;
+  }
+}
+
+//预约区域
+.wjs-book{
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+  .wjs-containter{
+    max-width: 970px;
+    margin: 0 auto;
+    .pull-left{
+      color: #666;
+      a{
+        color: red;
+        border-bottom: 1px dashed red;
+        text-decoration: none;
+      }
+    }
+    .pull-right{
+      a{
+        color: #666;
+      }
+      a:hover{
+        color: red;
+      }
+    }
+  }
+}
+
+//优惠券区域
+#wjs-ticket{
+  .nav-tabs{
+    li.active{
+      a{
+        border-color: transparent;
+        border-bottom: 4px solid red;
+      }
+    }
+    a{
+      color: #666;
+    }
+    a:hover{
+      background-color: transparent;
+      border-color:transparent;
+    }
+  }
+  .tab-content{
+    .row{
+      .ticket{
+        position: relative;
+        height:150px;
+        display: flex;
+        text-decoration: none;
+        box-shadow: 5px 5px 10px gray;
+        .left{
+          flex: 1;
+          border-right: 1px dashed #000;
+          h2{
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            padding: 5px 0;
+            color: #000;
+            font-weight: 400;
+            text-align: center;
+          }
+          .left-content{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+            p{
+              color: #000;
+              font-weight: 700;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .right{
+          width:108px;
+          position: relative;
+          text-align: center;
+          padding-top: 5px;
+          p{
+            color: #000;
+            font-weight: 900;
+            font-size: 14px;
+          }
+        }
+        .right::before{
+          content: "";
+          position: absolute;
+          width:20px;
+          height:20px;
+          border-radius: 50%;
+          top:-10px;
+          left:-10px;
+          border-bottom: 1px solid #000;
+          background-color: white;
+        }
+        .right::after{
+          content: "";
+          position: absolute;
+          width:20px;
+          height:20px;
+          border-radius: 50%;
+          bottom:-10px;
+          left:-10px;
+          border-top: 1px solid #000;
+          background-color: white;
+        }
+        .right.special-right{
+          position: relative;
+          span{
+            display: inline-block;
+            width:20px;
+            height:22px;
+            text-align: center;
+            line-height:22px;
+          }
+          span:first-child{
+            color:greenyellow;
+            border: 1px solid greenyellow;
+            font-size: 14px;
+            margin-right: 5px;
+            position:absolute;
+            top:5px;
+            left:30px;
+          }
+          span:last-of-type{
+            color: red;
+            border:1px solid red;
+            font-size: 14px;
+            position:absolute;
+            top:5px;
+            right:30px;
+          }
+          p:first-of-type{
+            margin-top: 25px;
+          }
+          p:first-of-type::first-letter{
+            font-size: 30px;
+            font-weight: 900;
+          }
+
+        }
+      }
+      .ticket.red{
+        background-color: red;
+        color: white;
+        h2{
+          color: white;
+        }
+        p{
+          color: white;
+        }
+        .left-content p{
+          color: white;
+        }
+      }
+      .ticket::before{
+        font-size: 40px;
+        color: white;
+        position: absolute;
+      }
+    }
+  }
+}
+
+//新闻区域
+.wjs-news{
+  .line{
+    height: 80%;
+    border-left: 1px dashed gray;
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
+  .row>div{
+    h2{
+      position: relative;
+      text-align: center;
+      border-bottom: 1px solid black;
+      padding-bottom: 20px;
+      &::before{
+        content:"";
+        width:10px;
+        height:10px;
+        border-radius: 50%;
+        position: absolute;
+        right: -10px;
+        bottom: -5px;
+        border: 1px solid black;
+      }
+    }
+  }
+  .nav-tabs{
+    border-bottom: 1px solid #ddd;
+    li{
+      padding-bottom: 50px;
+      a{
+        border-color: transparent;
+        width:70px;
+        height:70px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 50px;
+        line-height: 70px;
+        background-color: #ccc;
+        color: white;
+        padding: 0;
+
+      }
+    }
+    li.active a{
+      color: white;
+      background-color: red;
+    }
+
+  }
+  .tab-content{
+    ul{
+      li{
+        padding: 10px 0;
+        a{
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+//底部区域
+.wjs-footer{
+  text-align: center;
+  ul{
+    display: inline-block;
+    li{
+      padding: 10px;
+      a{
+        font-size: 100px;
+        text-decoration: none;
+        color: #666;
+      }
+    }
+  }
+
+}
+
+//给最大容器加最小的宽度
+.wjs-containter{
+  min-width: 320px;
+}
